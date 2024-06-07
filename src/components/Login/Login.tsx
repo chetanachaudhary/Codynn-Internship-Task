@@ -22,7 +22,10 @@ import {
 } from "@/components/ui/form";
 
 const formSchema = z.object({
-  code: z.string().min(5, {
+  Username: z.string().min(5, {
+    message: "Code must be at least 5 characters.",
+  }),
+  Password: z.string().min(5, {
     message: "Code must be at least 5 characters.",
   }),
 });
@@ -31,7 +34,8 @@ const login: React.FC = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      code: "",
+      Username: "",
+      Password: "",
     },
   });
 
@@ -50,7 +54,7 @@ const login: React.FC = () => {
               <form onSubmit={form.handleSubmit(onSubmit)}>
                 <FormField
                   control={form.control}
-                  name="code"
+                  name="Username"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-[#ACACAC] font-medium text-lg">
@@ -68,7 +72,7 @@ const login: React.FC = () => {
                 />
                 <FormField
                   control={form.control}
-                  name="code"
+                  name="Password"
                   render={({ field }) => (
                     <FormItem className="mt-[15px]">
                       <FormLabel className="text-[#ACACAC] font-medium text-lg ">
@@ -81,7 +85,7 @@ const login: React.FC = () => {
                         />
                       </FormControl>
 
-                      <FormDescription className="text-sm font-normal flex justify-end text-[#7C71CF] items-center  gap-2">
+                      <FormDescription className="text-sm font-normal flex justify-end text-[#7C71CF] items-center cursor-pointer  gap-2">
                         <span className=" ">Forget Password?</span>
                       </FormDescription>
                       <FormMessage />
