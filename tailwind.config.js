@@ -17,6 +17,11 @@ module.exports = {
       },
     },
     extend: {
+      
+        fontFamily: {
+          sans: ['DM Sans']
+        },
+     
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
