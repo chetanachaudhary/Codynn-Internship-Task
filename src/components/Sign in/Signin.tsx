@@ -43,15 +43,15 @@ const Signin: React.FC = () => {
   return (
     <>
       <div className="flex justify-center  bg-[#000000] ">
-        <div className=" w-[720px] h-[850px] bg-[#9B9B9B] bg-opacity-25 border-r-[0.5px] border-gray-500">
-          <div className="absolute">
+        <div className=" w-[646px] h-auto bg-[#9B9B9B] bg-opacity-25 border-r-[0.5px] border-gray-500">
+          {/* <div className="absolute">
             <img src={gradientblue} className=" w-80 h-80" alt="" />
-          </div>
+          </div> */}
           <div className="flex justify-center">
-            <img src={Logo} className=" mt-[131px] w-9 h-9" alt="" />
+            <img src={Logo} className=" mt-[96px] w-9 h-9" alt="" />
           </div>
          
-          <div className="w-[452px] h-72  ml-32 mt-36 font-sans">
+          <div className="w-[452px] h-72  ml-16 mt-36 font-sans">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)}>
                 <FormField
