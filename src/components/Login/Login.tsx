@@ -44,7 +44,9 @@ const login: React.FC = () => {
     <>
       <div className="flex justify-center  bg-[#000000] font-sans">
         <div className=" w-[646px] h-auto bg-[#9B9B9B] bg-opacity-25 border-r-[0.5px] border-gray-500">
-          <div className="absolute"></div>
+        <div className=" h-[100px] w-[100px] absolute z-1 top-52  right-[680px] rounded-full blur-[100px] bg-red-400"></div>
+          <div className=" h-[100px] w-[100px] absolute z-1 top-4   rounded-full blur-[100px] bg-blue-500"></div>
+          <div className=" h-[100px] w-[100px] absolute z-1 bottom-1   rounded-full blur-[100px] bg-yellow-400"></div>
           <div className="flex justify-center">
             <img src={Logo} className=" mt-[90px] w-9 h-9" alt="" />
           </div>
