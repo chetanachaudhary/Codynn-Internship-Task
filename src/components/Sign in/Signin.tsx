@@ -9,9 +9,6 @@ import { NavLink } from "react-router-dom";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import gradientblue from "/src/assets/gradientblue.png";
-import gradientred from "/src/assets/gradiantred.png";
-import gradientyellow from "/src/assets/gradiantyellow.png";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +20,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 
 const formSchema = z.object({
   code: z.string().min(5, {
@@ -44,13 +40,13 @@ const Signin: React.FC = () => {
     <>
       <div className="flex justify-center  bg-[#000000] ">
         <div className=" w-[646px] h-auto bg-[#9B9B9B] bg-opacity-25 border-r-[0.5px] border-gray-500">
-          {/* <div className="absolute">
-            <img src={gradientblue} className=" w-80 h-80" alt="" />
-          </div> */}
+          <div className=" h-[100px] w-[100px] absolute z-1 top-52  right-[680px] rounded-full blur-[100px] bg-red-400"></div>
+          <div className=" h-[100px] w-[100px] absolute z-1 top-4   rounded-full blur-[100px] bg-blue-500"></div>
+          <div className=" h-[100px] w-[100px] absolute z-1 bottom-1   rounded-full blur-[100px] bg-yellow-400"></div>
           <div className="flex justify-center">
             <img src={Logo} className=" mt-[96px] w-9 h-9" alt="" />
           </div>
-         
+
           <div className="w-[452px] h-72  ml-16 mt-36 font-sans">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -81,12 +77,12 @@ const Signin: React.FC = () => {
                   )}
                 />
                 <NavLink to="/Login">
-                <Button
-                  type="submit"
-                  className="w-[452px] bg-gradient-to-r from-[#609BF4] to-[#6E52A9] mt-12 "
-                >
-                  Continue
-                </Button>
+                  <Button
+                    type="submit"
+                    className="w-[452px] bg-gradient-to-r from-[#609BF4] to-[#6E52A9] mt-12 "
+                  >
+                    Continue
+                  </Button>
                 </NavLink>
               </form>
             </Form>
@@ -98,7 +94,6 @@ const Signin: React.FC = () => {
             <img src={gradientred} className="  w-96 h-96" alt="" />
           </div> */}
         </div>
-        
       </div>
     </>
   );
