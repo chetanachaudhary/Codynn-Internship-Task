@@ -23,10 +23,10 @@ import {
 
 const formSchema = z.object({
   Username: z.string().min(5, {
-    message: "Code must be at least 5 characters.",
+    message: "Username must be at least 5 characters.",
   }),
   Password: z.string().min(5, {
-    message: "Code must be at least 5 characters.",
+    message: "Password must be at least 5 characters.",
   }),
 });
 
@@ -63,7 +63,7 @@ const login: React.FC = () => {
 
                       <FormControl>
                         <Input
-                          className="bg-[#9B9B9B] bg-opacity-25 border-gray-500 border-[0.5px] rounded-lg"
+                          className="bg-[#9B9B9B] bg-opacity-25 border-gray-500 text-[#ffffff] text-md border-[0.5px] rounded-lg"
                           {...field}
                         />
                       </FormControl>
@@ -80,7 +80,8 @@ const login: React.FC = () => {
                       </FormLabel>
                       <FormControl>
                         <Input
-                          className="bg-[#9B9B9B] bg-opacity-25 border-gray-500 border-[0.5px] rounded-lg"
+                          className="bg-[#9B9B9B] text-[#ffffff] text-md  bg-opacity-25 border-gray-500 border-[0.5px] rounded-lg"
+                          type="password"
                           {...field}
                         />
                       </FormControl>

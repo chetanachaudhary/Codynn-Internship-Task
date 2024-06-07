@@ -64,7 +64,7 @@ const Signin: React.FC = () => {
                       </FormLabel>
                       <FormControl>
                         <Input
-                          className="bg-[#9B9B9B] bg-opacity-25 border-gray-500 border-[0.5px] rounded-lg"
+                          className="bg-[#9B9B9B]  text-[#ffffff] text-md bg-opacity-25 border-gray-500 border-[0.5px] rounded-lg"
                           {...field}
                         />
                       </FormControl>
