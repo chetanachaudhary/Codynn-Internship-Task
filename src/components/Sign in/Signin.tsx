@@ -47,7 +47,7 @@ const Signin: React.FC = () => {
             <img src={Logo} className=" mt-[96px] w-9 h-9" alt="" />
           </div>
 
-          <div className="w-[452px] h-72  ml-16 mt-36 font-sans">
+          <div className="w-[452px] h-72  ml-20 mt-36 font-sans">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)}>
                 <FormField
